@@ -1,3 +1,11 @@
+cloudbees-pipeline-policies:
+  config:
+    policies:
+    - action: "fail"
+      name: "Timeout policy"
+      rules:
+      - entirePipelineTimeoutRule:
+          maxTime: 30
 jenkins:
   globalNodeProperties:
   - envVars:
@@ -5,7 +13,7 @@ jenkins:
       - key: "BUNDLE_ID"
         value: "melshahat-cloudbees-ci-controller"
   quietPeriod: 0
-  systemMessage: 'Jenkins configured using CloudBees CI CasC - v2'
+  systemMessage: 'Jenkins configured using CloudBees CI CasC - v3'
 unclassified:
   hibernationConfiguration:
     activities:
