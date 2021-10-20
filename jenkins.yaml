@@ -1,3 +1,6 @@
+notificationConfiguration:
+  enabled: true
+  router: "localOnlyFallback"
 cloudbees-slack-integration:
   config:
     slackToken: "${slackToken}"
@@ -25,7 +28,7 @@ jenkins:
       - key: "BUNDLE_ID"
         value: "melshahat-cloudbees-ci-controller"
   quietPeriod: 0
-  systemMessage: 'Jenkins configured using CloudBees CI CasC - v5'
+  systemMessage: 'Jenkins configured using CloudBees CI CasC - v6'
 unclassified:
   hibernationConfiguration:
     activities:
