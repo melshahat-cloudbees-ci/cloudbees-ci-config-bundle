@@ -7,13 +7,14 @@ cloudbees-pipeline-policies:
       - entirePipelineTimeoutRule:
           maxTime: 60
 jenkins:
+  authorizationStrategy: "cloudBeesRoleBasedAccessControl"
   globalNodeProperties:
   - envVars:
       env:
       - key: "BUNDLE_ID"
         value: "melshahat-cloudbees-ci-controller"
   quietPeriod: 0
-  systemMessage: 'Jenkins configured using CloudBees CI CasC - v4'
+  systemMessage: 'Jenkins configured using CloudBees CI CasC - v2'
 unclassified:
   hibernationConfiguration:
     activities:
@@ -69,7 +70,9 @@ kube:
       - emptyDirVolume:
           memory: false
           mountPath: "/var/maven/"
-      yamlMergeStrategy: "override"    
+      yamlMergeStrategy: "override"
+groovy:
+  - url: https://raw.githubusercontent.com/melshahat-cloudbees-ci/cloudbees-ci-config-bundle/master/groovy/create-pipeline-template-job.groovy
 credentials:
   system:
     domainCredentials:
