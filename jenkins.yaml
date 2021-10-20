@@ -5,7 +5,7 @@ cloudbees-pipeline-policies:
       name: "Timeout policy"
       rules:
       - entirePipelineTimeoutRule:
-          maxTime: 30
+          maxTime: 60
 jenkins:
   globalNodeProperties:
   - envVars:
@@ -13,7 +13,7 @@ jenkins:
       - key: "BUNDLE_ID"
         value: "melshahat-cloudbees-ci-controller"
   quietPeriod: 0
-  systemMessage: 'Jenkins configured using CloudBees CI CasC - v3'
+  systemMessage: 'Jenkins configured using CloudBees CI CasC - v4'
 unclassified:
   hibernationConfiguration:
     activities:
@@ -30,7 +30,7 @@ unclassified:
     durabilityHint: PERFORMANCE_OPTIMIZED
   globallibraries:
     libraries:
-    - defaultVersion: "main"
+    - defaultVersion: "module-2"
       name: "pipeline-library"
       retriever:
         modernSCM:
@@ -69,7 +69,7 @@ kube:
       - emptyDirVolume:
           memory: false
           mountPath: "/var/maven/"
-      yamlMergeStrategy: "override"
+      yamlMergeStrategy: "override"    
 credentials:
   system:
     domainCredentials:
