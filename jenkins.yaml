@@ -7,7 +7,7 @@ cloudbees-slack-integration:
       jenkins: "mahmoud-elshahat-sp"
       optedIn: true
       scmId: "mahmoud-elshahat-sp"
-      slack: "REPLACE_USER_EMAIL"
+      slack: "mahmoud.elshahat@sailpoint.com"
       slackWorkspace: "T010A455W77"
 cloudbees-pipeline-policies:
   config:
