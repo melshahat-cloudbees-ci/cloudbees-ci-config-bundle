@@ -32,7 +32,7 @@ plugins:
 - id: pipeline-stage-view
 - id: plugin-util-api
 - id: pipeline-utility-steps
-- id: popper-api
+- id: popper-api 
 - id: warnings-ng
 - id: wikitext
 - id: workflow-aggregator
